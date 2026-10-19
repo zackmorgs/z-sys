@@ -1,4 +1,4 @@
-# zsys
+# z-sys
 My custom design system I made for fun.
 
 ## Goals
