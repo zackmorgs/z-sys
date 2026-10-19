@@ -1,0 +1,260 @@
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  color: #172d2d;
+}
+
+// #hero_homepage {
+//   background: linear-gradient(45deg, rgba(63, 0, 238, 0.125), rgba(255, 0, 0, 0.144),rgba(255, 219, 18, 0.25));
+//   border-bottom: 1px solid rgba(23, 45, 45, 0.22);
+// }
+
+.home-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1fr);
+  align-items: center;
+  gap: 64px;
+  width: min(1160px, 100%);
+  min-height: calc(100svh - 72px);
+  margin: 0 auto;
+  padding: 64px 40px;
+}
+
+.home-copy {
+  max-width: 510px;
+  animation: home-rise 700ms ease-out both;
+}
+
+.home-kicker,
+.home-art-heading,
+.home-mark-label {
+  font-size: 0.68rem;
+  font-variation-settings:
+    "wdth" 110,
+    "wght" 500;
+  letter-spacing: 0.08em;
+}
+
+.home-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: #586563;
+}
+
+.home-kicker span {
+  color: #172d2d;
+  font-variation-settings:
+    "wdth" 110,
+    "wght" 650;
+}
+
+.home-title {
+  max-width: 9ch;
+  margin: 0;
+  font-size: 5rem;
+  line-height: 0.98;
+  font-variation-settings:
+    "wdth" 95,
+    "wght" 500;
+}
+.home-description {
+  max-width: 430px;
+  margin: 28px 0 30px;
+  color: #4f5c59;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.home-cta:hover {
+  transform: translate(2px, 2px);
+  background: #294342;
+  box-shadow: 3px 3px 0 #cd6799;
+}
+
+.home-cta:focus-visible {
+  outline: 3px solid #1f8093;
+  outline-offset: 5px;
+}
+
+.home-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 34px 0 0;
+  color: #66716e;
+  font-size: 0.82rem;
+}
+
+.home-note span {
+  display: inline-grid;
+  width: 28px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #b64d7f;
+  border-radius: 50%;
+  color: #b64d7f;
+  font-size: 0.7rem;
+}
+
+.home-art {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1 / 0.94;
+  overflow: hidden;
+  border: 1px solid rgba(23, 45, 45, 0.22);
+  background-size: 9px 9px;
+  box-shadow: 10px 10px 1rem #172d2d42;
+  /* animation: home-rise 800ms 120ms ease-out both;*/
+
+  background-color: white;
+}
+
+.home-art-heading {
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: 24px;
+  left: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: #334b37;
+}
+
+.home-sass-mark {
+  position: absolute;
+  top: 17%;
+  left: 8%;
+  display: grid;
+  width: 46%;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(23, 45, 45, 0.15);
+  border-radius: 50%;
+  background: #fffdf7;
+  box-shadow: 7px 7px 0 rgba(23, 45, 45, 0.16);
+}
+
+.home-mark-label {
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  color: #586563;
+  font-size: 0.56rem;
+}
+
+.home-sass-icon {
+  display: block;
+  width: 63%;
+  height: auto;
+}
+
+.home-tailwind-mark {
+  position: absolute;
+  right: 5%;
+  bottom: 17%;
+  width: 72%;
+  padding: 46px 22px 20px;
+  border: 1px solid rgba(23, 45, 45, 0.18);
+  background: white;
+  // box-shadow: 7px 7px 0 #172d2d;
+  transform: rotate(-5deg);
+}
+
+.home-tailwind-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-art-stamp {
+  z-index: 1;
+  background: white;
+  position: absolute;
+  right: 7%;
+  top: 20%;
+  display: grid;
+  width: 76px;
+  aspect-ratio: 1;
+  place-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(14, 17, 189);
+  font-size: 0.58rem;
+  line-height: 1.35;
+  text-align: center;
+  transform: rotate(9deg);
+}
+
+@keyframes home-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+    gap: 38px;
+    padding: 52px 30px;
+  }
+
+  .home-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+    min-height: auto;
+    padding: 56px 26px 72px;
+  }
+
+  .home-title {
+    max-width: 11ch;
+    font-size: 3.5rem;
+  }
+
+  .home-art {
+    width: min(100%, 500px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-shell {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-art-heading {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    font-size: 0.58rem;
+  }
+
+  .home-tailwind-mark {
+    padding: 38px 16px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-copy,
+  .home-art {
+    animation: none;
+  }
+}

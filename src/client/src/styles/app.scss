@@ -1,0 +1,234 @@
+@import "../../node_modules/plumber-sass/plumber";
+
+@import url("https://use.typekit.net/enh8mzm.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@include plumber-set-defaults(
+  $baseline: 0.1435,
+  $font-size: 1,
+  $grid-height: 1,
+  $leading-bottom: 0,
+  $leading-top: 0
+);
+
+:root {
+  font-size: 18px;
+  font-family: "oso-sans-variable", sans-serif;
+  font-variation-settings:
+    "wdth" 100,
+    "wght" 200;
+
+  //   @include plumber(
+  //     $grid-height: 1rem,
+  //     $font-size: 1,
+  //     $line-height:1,
+  //     $leading-top: 0,
+  //     $leading-bottom: 0
+  //   );
+  // }
+
+}
+
+body {
+      background-color: white;
+  background-image:
+    linear-gradient(rgba(0, 17, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 17, 255, 0.1) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings:
+    "wdth" 120,
+    "wght" 300;
+}
+
+h1 {
+  font-variation-settings:
+    "wdth" 110,
+    "wght" 100;
+
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 3,
+    $line-height: 4,
+    $leading-top: 1,
+    $leading-bottom: 2
+  );
+
+  & + .subtitle {
+    font-variation-settings:
+      "wdth" 110,
+      "wght" 200;
+
+    @include plumber(
+      $grid-height: 1rem,
+      $font-size: 1.5,
+      $line-height: 2,
+      $leading-top: -2,
+      $leading-bottom: 2
+    );
+  }
+}
+
+h2 {
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 2.5,
+    $line-height: 3,
+    $leading-top: 1,
+    $leading-bottom: 2
+  );
+
+  & + .subtitle {
+    font-variation-settings:
+      "wdth" 110,
+      "wght" 100;
+
+    @include plumber(
+      $grid-height: 1rem,
+      $font-size: 1.5,
+      $line-height: 2,
+      $leading-top: -2,
+      $leading-bottom: 2
+    );
+  }
+}
+
+h3 {
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 2,
+    $line-height: 2,
+    $leading-top: 1,
+    $leading-bottom: 1
+  );
+
+  & + .subtitle {
+    font-variation-settings:
+      "wdth" 110,
+      "wght" 400;
+    color: #424243;
+
+    @include plumber(
+      $grid-height: 1rem,
+      $font-size: 1,
+      $line-height: 2,
+      $leading-top: 0,
+      $leading-bottom: 1
+    );
+  }
+}
+
+h4 {
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 1.5,
+    $line-height: 2,
+    $leading-top: 1,
+    $leading-bottom: 1
+  );
+
+  & + .subtitle {
+    font-variation-settings:
+      "wdth" 110,
+      "wght" 300;
+
+    font-size: 0.75rem;
+
+    @include plumber(
+      $grid-height: 1rem,
+      $font-size: 1,
+      $line-height: 2,
+      $leading-top: 0,
+      $leading-bottom: 1
+    );
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 1,
+    $line-height: 2,
+    $leading-top: 0,
+    $leading-bottom: 1
+  );
+}
+
+b {
+  font-variation-settings:
+    "wdth" 100,
+    "wght" 375;
+}
+
+// colors
+$black: #222;
+$grey: #888;
+$white: #f1f1f1;
+$red: #ff0000;
+$blue: #0000ff;
+$green: #00ff00;
+
+.txt-black {
+  color: $black;
+}
+
+.txt-grey {
+  color: $grey;
+}
+
+.txt-white {
+  color: $white;
+}
+
+.txt-red {
+  color: $red;
+}
+
+.txt-blue {
+  color: $blue;
+}
+
+.txt-green {
+  color: $green;
+}
+
+.bg-black {
+  background: $black;
+  color: $white;
+}
+.bg-white {
+  background: $white;
+  color: $black;
+}
+.bg-grey {
+  background: $grey;
+  color: $white;
+}
+.bg-red {
+  background: $red;
+  color: $white;
+}
+.bg-blue {
+  background: $blue;
+  color: $white;
+}
+.bg-green {
+  background: $green;
+  color: $black;
+} 

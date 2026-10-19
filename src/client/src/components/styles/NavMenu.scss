@@ -1,0 +1,146 @@
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    color: #222;
+    background: #ffffffb5;
+    backdrop-filter: blur(0.125rem);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1160px, 100%);
+    max-height: 5rem;
+    margin: 0 auto;
+    padding:0.5rem 0.75rem;
+}
+
+#nav_logo {
+    color: inherit;
+    font-size: 1rem;
+    font-variation-settings: "wdth" 110, "wght" 400;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0 32px;
+    list-style: none;
+}
+
+.nav-item {
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 13px;
+    border-radius: 3px;
+    color: #444;
+    font-size: 0.9rem;
+    font-variation-settings: "wdth" 105, "wght" 350;
+    text-decoration: none;
+    transition: color 160ms ease, background-color 160ms ease;
+    text-transform:uppercase;
+
+    &.active {
+        background: #333;
+        color: #f1f1f1;
+    }
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: #333;
+}
+
+.nav-link:focus-visible,
+.nav-toggle:focus-visible,
+#nav_logo:focus-visible {
+    outline: 2px solid #d6ed75;
+    outline-offset: 3px;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    place-content: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 3px;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.nav-toggle.is-open span:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-open span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 720px) {
+    .nav-bar {
+        // padding: 0 22px;
+    }
+
+    .nav-toggle {
+        display: grid;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 22px 18px;
+        background: white;
+        color:#222;
+        box-shadow: 0 12px 18px rgba(12, 28, 27, 0.2);
+    }
+
+    .nav-list.is-open {
+        display: flex;
+    }
+
+    .nav-link {
+        min-height: 46px;
+        padding: 0 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-link,
+    .nav-toggle span {
+        transition: none;
+    }
+}
