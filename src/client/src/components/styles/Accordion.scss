@@ -2,6 +2,8 @@
   border-radius: 4px;
   background: #f1f1f1;
   color: #222;
+  border-radius:0.5rem;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .accordion-title {
@@ -24,7 +26,7 @@
 
 .accordion-title::after {
   width: 0.55rem;
-  height: 0.55rem;
+  height: 0.55rem; 
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   content: "";

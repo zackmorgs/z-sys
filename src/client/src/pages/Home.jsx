@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <Layout>
       <Hero id="hero_homepage" className="home-hero">
-        <div className="home-shell">
-          <section className="home-copy">
+        <div className="">
+          <section className="home-copy mb-4">
             <h1 className="home-title">Make your app shine.</h1>
 
             <p className="home-description">
-              A thoughtful front-end starter for building polished pages with
-              reusable components with <b>SASS</b> and <b>Tailwind CSS</b>.
+              A front-end design system for building polished pages with
+              reusable components.
             </p>
             <LinkButton className="bg-black" to="/components">
               <span>Explore components</span>
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </Hero>
       <Content>
-        <div className="home-art" role="img" aria-label="Sass and Tailwind CSS">
+        <div className="home-art mt-4" role="img" aria-label="Sass and Tailwind CSS">
           <div className="home-art-heading">
             <span>THE FRONT-END STACK</span>
             <span>01 — 02</span>

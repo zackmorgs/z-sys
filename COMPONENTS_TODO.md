@@ -1,6 +1,6 @@
 # zsys Component TODO
 
-A practical component roadmap for zsys, synthesized from common patterns across the design systems catalog at [awesome-design-systems](https://github.com/alexpate/awesome-design-systems). The catalog is a directory of systems, not a prescribed component list; treat this as a starter checklist and build components as product needs emerge.
+A practical component roadmap for z-sys, synthesized from common patterns across the design systems catalog at [awesome-design-systems](https://github.com/alexpate/awesome-design-systems). The catalog is a directory of systems, not a prescribed component list; treat this as a starter checklist and build components as product needs emerge.
 
 ## Foundations
 

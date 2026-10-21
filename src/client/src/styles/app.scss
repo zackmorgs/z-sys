@@ -170,6 +170,27 @@ p {
   );
 }
 
+.content {
+  ul {
+    @include plumber(
+      $grid-height: 1rem,
+      $font-size: 1,
+      $line-height: 1,
+      $leading-top: 0,
+      $leading-bottom: 0
+    );
+  }
+  ul > li {
+  @include plumber(
+    $grid-height: 1rem,
+    $font-size: 1,
+    $line-height: 1,
+    $leading-top: 0,
+    $leading-bottom: 1
+  );
+}
+}
+
 b {
   font-variation-settings:
     "wdth" 100,
